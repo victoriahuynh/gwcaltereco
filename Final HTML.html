@@ -1,0 +1,273 @@
+<html>
+<head>
+	<title>Alter Eco</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="themes/Eco.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" type="text/css" href="Final CSS.css">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="Final JS.js"></script>
+	<script src="tabletop1.3.4.js"></script>
+</head>
+<body type="text" onkeydown="move(event,$('#thing').val())" >
+
+
+<!-- Start of first page -->
+<div data-role="page" id="home">
+	<div data-role="header" class="head">
+		<a href="#" data-toggle=".container" id="sidebar-toggle">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</a>
+		<h1>Welcome to AlterEco!</h1>
+	</div>
+	<div class="container">
+		<div id="sidebar" height ="100%">
+			<ul>
+				<li><a data-toggle=".container" href="#home"><img src="home-black.png"/></a></li>
+				<li><a data-toggle=".container" href="#trivia">Trivia</a></li>
+				<li><a data-toggle=".container" href="#symbolGuide">Symbol Guide</a></li>
+				<li><a data-toggle=".container" href="#aboutUs">About Us</a></li>
+			</ul>
+		</div>
+		<div class="main-content">
+			<div class="swipe-area"></div>
+			<div class="content">
+				<h1 style = "font-size: 35px"><p>What do I do with my item?</p></h1>
+				<input type="text" id="thing" placeholder="Search for an item">
+				<div style="font-size:28px" id="logId"></div>
+				<button type= "button" onclick="location.href='https://docs.google.com/forms/d/1EapAidusveZQiOYwEcGClsKMZ-ytmHZHbybUn2nwROs/viewform';" id="bu" style="background:#003366"> Suggest </button>
+				<script>document.getElementById('bu').style.visibility='hidden';</script>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Start of second page -->
+<div data-role="page" id="trivia">
+	<div data-role="header" class="head">
+		<a href="#" data-toggle=".container" id="sidebar-toggle">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</a>
+		<h1>Trivia!</h1>
+	</div>
+	<div class="container">
+		<div id="sidebar">
+			<ul>
+				<li><a data-toggle=".container" href="#home"><img src="home-black.png"/></a></li>
+				<li><a data-toggle=".container" href="#trivia">Trivia</a></li>
+				<li><a data-toggle=".container" href="#symbolGuide">Symbol Guide</a></li>
+				<li><a data-toggle=".container" href="#aboutUs">About Us</a></li>
+			</ul>
+		</div>
+		<div class="main-content">
+			<div class="swipe-area"></div>
+			<div class="content">
+				<ul class="theQuiz">
+					<li class="question q1 transition">
+						<h1>1<span>The average person generates over 4 pounds of trash every day and about 1.5 tons of solid waste per year.</span></h1>
+						<form class="quizQ">
+							<label for="answer1a"><input class="answer" id="answer1a" type="radio" name="answer1" value="answer1a" /> True</label>
+							<label for="answer1b"><input class="answer" id="answer1b" type="radio" name="answer1" value="answer1b" />False </label>
+							<div class="submit"> <button type= "button" style="background:#003366"> Next </button> </div>
+						</form>
+					</li>
+					<li class="question q2 transition">
+						<h1>2<span>The EPA estimates that 75% of the American waste stream is recyclable, but we only recycle about 40% of it.</span></h1>
+						<form class="quizQ">
+							<label for="answer2a"><input class="answer" id="answer2a" type="radio" name="answer2" value="answer2a" />True</label>
+							<label for="answer2b"><input class="answer" id="answer2b" type="radio" name="answer2" value="answer2b" />False</label>
+							<div class="submit">  <button type="button" style="background:#003366"> Next  </button> </div>
+						</form>
+					</li>
+					<li class="question q3 transition">
+						<h1>3<span>Americans throw away about 28 billion bottles and jars every year.</span></h1>
+						<form class="quizQ">
+							<label for="answer3a"><input class="answer" id="answer3a" type="radio" name="answer3" value="answer3a" />True</label>
+							<label for="answer3b"><input class="answer" id="answer3b" type="radio" name="answer3" value="answer3b" />False</label>
+							<div class="submit"> <button type="button" style="background:#003366"> Next </button> </div>
+						</form>
+					</li>
+					<li class="question q4 transition">
+						<h1>4<span>If just 25% of American families used 10 fewer plastic bags a month, it would save over 2.5 ________ bags a year.</span></h1>
+						<form class="quizQ">
+							<label for="answer4a"><input class="answer" id="answer4a" type="radio" name="answer4" value="answer4a" /> thousand</label>
+							<label for="answer4b"><input class="answer" id="answer4b" type="radio" name="answer4" value="answer4b" />million</label>
+							<label for="answer4c"><input class="answer"	id="answer4c" type="radio" name="answer4" value="answer4c" />billion </label>
+							<div class="submit"> <button type="button" style="background:#003366"> Next </button> </div>
+						</form>
+					</li>
+					<li class="question q5 transition">
+						<h1>5<span>The average US. Household generates______lbs. of compostable materials each year.</span></h1>
+						<form class="quizQ">
+							<label for="answer5a"><input class="answer" id="answer5a" type="radio" name="answer5" value="answer5a" /> 550</label>
+							<label for="answer5b"><input class="answer" id="answer5b" type="radio" name="answer5" value="answer5b" />650</label>
+							<label for="answer5c"><input class="answer"	id="answer5c" type="radio" name="answer5" value="answer5c" />750 </label>
+							<div class="submit"> <button type= "button" style="background:#003366"> Next </button> </div>
+						</form>
+					</li>
+					<li class="question q6 transition">
+						<h1>6<span>What category of plastic do ABS plastics have the same considerations as?</span></h1>
+						<form class="quizQ">
+							<label for="answer6a"><input class="answer" id="answer6a" type="radio" name="answer6" value="answer6a" /> Category 7 Plastics</label>
+							<label for="answer6b"><input class="answer" id="answer6b" type="radio" name="answer6" value="answer6b" />Category 6 plastics</label>
+							<label for="answer6c"><input class="answer"	id="answer6c" type="radio" name="answer6" value="answer6c" />Category 5 plastics </label>
+							<div class="submit"> <button type= "button" style="background:#003366"> Next </button> </div>
+						</form>
+					</li>
+					<li class="question q7 transition">
+						<h1>7<span>What plastic is used to make styrofoam?</span></h1>
+						<form class="quizQ">
+							<label for="answer7a"><input class="answer" id="answer7a" type="radio" name="answer7" value="answer7a" /> polyethylene</label>
+							<label for="answer7b"><input class="answer" id="answer7b" type="radio" name="answer7" value="answer7b" />polypropylene</label>
+							<label for="answer7c"><input class="answer"	id="answer7c" type="radio" name="answer7" value="answer7c" />polystyrene </label>
+							<div class="submit"> <button type= "button" style="background:#003366"> Next </button> </div>
+						</form>
+					</li>
+
+					<li class="finalPage">
+						<p class="yourScore" id="totalScore">You have scored</p>
+						<p class="info">
+							1. <strong> True. </strong> We generate 4 pounds of trash each day, and 1.5 billion each year! Yuck!
+							<br>
+							2. <strong> False. </strong> We only recycle about 30% of it, not 40%.
+							<br>
+							3. <strong> True. </strong> Americans throw away about 28 billion bottles and jars every year that could be recycled instead. A glass container can go from a recycling bin to a store shelf in as few as 30 days.
+							<br> 
+							4. <strong> Billion! </strong> Can you believe it?
+							<br>
+							5. <strong> 650 </strong> . Yes, it's true. 650 pounds of compostable material goes uncomposted each year <i> per household </i>. 
+							<br>
+							6. <strong> Category 7.</strong> ABS plastics have the same considerations as Category 7 platics 
+							<br>
+							7.<strong>Polystyrene.</strong> Polystyrene is the plastic used to make styrofoam. 
+						</p>
+						<div class="shareSpace">
+							<a class="nav-twitter transition" title="Tweet this page" href="http://twitter.com/home?status=[YOUR_DEFAULT_TWEET]" target=" _blank"><span class="share">Tweet your score</span></a>
+							<br>
+							<a class="nav-facebook transition" title="Share this page on Facebook" href="http://facebook.com/sharer/sharer.php?u=[URL_TO_SHARE]" target="_blank"><span class="share">Share on Facebook</span></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div data-role="page" id="symbolGuide">
+	<div data-role="header" class="head">
+		<a href="#" data-toggle=".container" id="sidebar-toggle">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</a>
+		<h1>Guide to Recycling Symbols and Numbers</h1>
+	</div>
+	<div class="container">
+	<div id="sidebar">
+		<ul>
+			<li><a data-toggle=".container" href="#home"><img src="home-black.png"/></a></li>
+			<li><a data-toggle=".container" href="#trivia">Trivia</a></li>
+			<li><a data-toggle=".container" href="#symbolGuide">Symbol Guide</a></li>
+			<li><a data-toggle=".container" href="#aboutUs">About Us</a></li>
+		</ul>
+	</div>
+		<div class="main-content">
+			<div class="swipe-area"></div>
+			<div class="content">
+				<h1><p>Understand Your Recyclables</p></h1>
+				<!--text style="font-size: 20px">Select a symbol:</text-->
+				<input type="image" onclick="setPlastic0()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Plastic-recyc-01.svg/50px-Plastic-recyc-01.svg.png">
+				<input type="image" onclick="setPlastic1()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Plastic-recyc-02.svg/50px-Plastic-recyc-02.svg.png">
+				<input type="image" onclick="setPlastic2()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Plastic-recyc-03.svg/50px-Plastic-recyc-03.svg.png">
+				<input type="image" onclick="setPlastic3()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Plastic-recyc-04.svg/50px-Plastic-recyc-04.svg.png">
+				<input type="image" onclick="setPlastic4()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Plastic-recyc-05.svg/50px-Plastic-recyc-05.svg.png">
+				<input type="image" onclick="setPlastic5()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Plastic-recyc-06.svg/50px-Plastic-recyc-06.svg.png">
+				<input type="image" onclick="setPlastic6()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Plastic-recyc-07.svg/50px-Plastic-recyc-07.svg.png">
+				<input type="image" onclick="setPlastic7()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Plastic-recyc-abs.svg/50px-Plastic-recyc-abs.svg.png">
+				<br></br>
+				<table class="plasticsTable" width="100%">
+					<tr>
+						<th class="tableHead">Code</th>
+						<th class="tableHead">Description</th>
+						<th></th>
+						<th class="tableHead">Environmental Significance</th>
+					</tr>
+					<tr>
+						<td width="6%" valign="top">
+							<img id="thePicture" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Plastic-recyc-01.svg/50px-Plastic-recyc-01.svg.png"/>
+						</td>
+						<td width="30%" id="theDescription" valign="top">
+							Usually found on clear plastics such as soda and water bottles. When recycled, it is used to make tote bags, furniture, carpeting, and polyester clothing. 
+						</td>
+						<td width="2%"></td>
+						<td width="30%" id="significance" valign="top">
+							It is commonly recycled by recycling programs. However, harmful chemicals are used in the cleaning of the recycled material and the environmental impact may be harmful.
+						</td>
+					</tr>
+				</table>
+				<input type="button" class="button" onclick="changePlastic()" value="Next Plastic">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div data-role="page" id="aboutUs">
+	<div data-role="header" class="head">
+		<a href="#" data-toggle=".container" id="sidebar-toggle">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</a>
+		<h1>About Us</h1>
+	</div>
+	<div class="container">
+		<div id="sidebar">
+			<ul>
+				<li><a data-toggle=".container" href="#home"><img src="home-black.png"/></a></li>
+				<li><a data-toggle=".container" href="#trivia">Trivia</a></li>
+				<li><a data-toggle=".container" href="#symbolGuide">Symbol Guide</a></li>
+				<li><a data-toggle=".container" href="#aboutUs">About Us</a></li>
+			</ul>
+		</div>
+
+		<div class="main-content" align="center">
+			<div class="swipe-area"></div>
+			<div>
+				<h2> <img src= "girls-who-code-logo.png" width="200vh"> <img style= float: "left"</h2>
+			</div>
+			<h1>Learn About Us!</h1>
+			<div class="content">
+				<table>
+				<tr>
+				<td><text width="200vh" style = "font-size: 26px"><strong>Corinne </strong></text></td>
+				<td><img src = "http://oi60.tinypic.com/2ppa7bo.jpg" width="100vh" height="100vh"></td>		
+				<td width="200vh"><strong> Corinne </strong> is a rising senior in the Class of 2016. In her free time, she enjoys playing soccer and traveling. She is also an aspiring superhero.</td>
+				</tr>
+				<tr>
+				<td><text width="200vh" style = "font-size: 26px"><strong> Devki </strong></text></td>
+				<td><img src = "http://oi58.tinypic.com/30lfpr8.jpg" width="100vh" height="100vh"></td>		
+				<td width="200vh"> <strong> Devki </strong> will be a senior for the Class of 2016. She enjoys cottage cheese, hiking, and travelling.</td>
+				</td>
+				</tr>
+				<tr>
+				<td><text width="200vh" style = "font-size: 26px"><strong> Stephanie </strong> </text></td>
+				<td><img src = "http://oi62.tinypic.com/5b8pqb.jpg" width="100vh" height="100vh"></td>		
+				<td width="200vh"><strong>Stephanie</strong> will be a Class of 2016 senior. She enjoys nail art, music, and the rain.</td>
+				</tr>
+				<tr>
+				<td><text width="200vh" style = "font-size: 26px"> <strong>Victoria </strong></text></td>
+				<td><img src = "http://oi57.tinypic.com/v67myw.jpg" width="100vh" height="100vh"></td>
+				<td width="200vh"> <strong> Victoria </strong> is a rising junior who likes robotics, musicals, and attractive guys. People who know her often describe her as "sassy" and "a potato".</td>
+				</table> 
+			</div>
+		</div>
+	</div>
+</div>
+</html>
+</html>

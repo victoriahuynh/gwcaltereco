@@ -1,0 +1,249 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	overflow:scroll;
+	font-family: Century Gothic;
+	font-weight: 100;
+}
+
+#aboutUs, #home, #tirvia, #symbolGuide {
+	overflow:hidden;
+}
+
+#logId{
+	text-align:center;
+	font-size: 250%;
+}
+.plasticsTable {
+	text-align: left;
+	border: 5px;
+}
+.tableHead {
+	text-align: left;
+}
+.container {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	-webkit-transition:  left 0.4s ease-in-out;
+	-moz-transition:  left 0.4s ease-in-out;
+	-ms-transition:  left 0.4s ease-in-out;
+	-o-transition:  left 0.4s ease-in-out;
+	transition:  left 0.4s ease-in-out;
+}
+.container.open-sidebar {
+	left: 240px;
+}
+.swipe-area {
+	position: absolute;
+	width: 50px;
+	left: 0;
+	top: 0;
+	height: 100%;
+	z-index: 0;
+}
+#sidebar {
+	background: #339966;
+	position: absolute;
+	width: 240px;
+	height: 100%;
+	left: -240px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#sidebar ul li {
+	margin: 0;
+}
+#sidebar ul li a {
+	padding: 15px 20px;
+	font-size: 16px;
+	font-weight: 100;
+	color: white;
+	text-decoration: none;
+	display: block;
+	border-bottom: 1px solid #293D66;
+	-webkit-transition:  background 0.3s ease-in-out;
+	-moz-transition:  background 0.3s ease-in-out;
+	-ms-transition:  background 0.3s ease-in-out;
+	-o-transition:  background 0.3s ease-in-out;
+	transition:  background 0.3s ease-in-out;
+}
+#sidebar ul li:hover a {
+	background: #007A7A;
+}
+.main-content {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
+	height:100vh;
+}
+.main-content .content{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding-left: 60px;
+	width: 100%;
+	height: 100%;
+}
+.main-content .content h1{
+	font-weight: 100;
+}
+.main-content .content p{
+	width: 100%;
+	line-height: 160%;
+}
+.head #sidebar-toggle {
+	background: #293D66;
+	border-radius: 7px;
+	display: block;
+}
+.head #sidebar-toggle .bar{
+	display: block;
+	width: 18px;
+	margin-bottom: 3px;
+	height: 2px;
+	background-color: white;
+	border-radius: 1px;   
+}
+.main-content #sidebar-toggle .bar:last-child{
+	margin-bottom: 0;	 
+}
+.theQuiz {
+	height:700px;
+	list-style-type: none;
+	margin:0;
+	overflow: hidden;
+	padding:0;
+	position:relative;
+	width:100%;
+	background-size:cover;
+}
+.theQuiz li {
+	display: block;
+	float:left;
+	list-style-type: none;
+	list-style: none;
+	margin:0;
+	padding:0;
+	width:100%;
+	border-bottom: solid black 1px;
+	box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+}
+
+li.q1, li.q2, li.q3, li.q4, li.q5, li.q6, li.q7 {
+}
+.theQuiz li form {
+	float:left;
+	margin:3.3em 0 0 1em;
+	padding:10px;
+	width:80%
+}
+.theQuiz li h1 {
+	float: left;
+	font-family: Century Gothic;
+	font-size: 3em;
+	font-weight: normal;
+	line-height: 0.8em;
+	position: relative;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+.theQuiz li h1 span {
+	clear:left;
+	font-size: 0.7em;
+	margin: 0 0 0 8px;
+}
+.question input.answer {
+	clear: left;
+	float: left;
+	margin: 3px 10px 0 10px;
+}
+.question label {
+	float:left;
+	margin:10px 0 0 0;
+	width:90%;
+}
+.question .submit {
+	clear:left;
+	cursor: hand;
+	float:right;
+	margin:8px 10px 0 10px;
+	opacity: 0.3;
+}
+.question#checked .submit {
+	opacity: 1;
+}
+/*.q1, .q2, .q3, .q4, .q5 {
+	position:absolute;
+	top:0;
+	left:0;
+}*/
+.finalPage {
+	
+	float:left;
+	/*margin:1.6em 5%;*/
+	width:90%;
+}
+.finalPage .yourScore {
+	font-size: 5em;
+	text-align: center;
+	/*margin:0.2em 0 3em 0;*/
+	width:100%;
+	color: white;
+}
+.finalPage .info {
+	margin:1.1em;
+	font-size: 1.7em;
+}
+.progress {
+	font-size: 1em;
+	line-height: 0.95em;
+	margin: 0;
+	padding: 0.4em;
+	position: absolute;
+	top:0;
+	right:0;
+	text-align: center;
+}
+.progress span#correctAnswers,  .progress span#potentialAnswers {
+	font-size: 1.4em;
+}
+.finished .progress {
+	font-size: 5em;
+	text-align: center;
+	top:0.9em;
+	right:0;
+	width:100%;
+}
+.finished .progress span#score {
+	display: blue;
+}
+.yourScore {
+	font-size: 7em;
+	text-align: center;
+	margin:0.2em 0;
+	width:100%;
+}
+.shareSpace{
+	font-size:  2em;
+}
+.transition {
+	-moz-transition: all 600ms ease-out;
+	-webkit-transition: all 600ms ease-out;
+	-o-transition: all 600ms ease-out;
+	transition: all 600ms ease-out;
+}
+.content.main-content {
+	margin-left: auto;
+    margin-right: auto;
+}
